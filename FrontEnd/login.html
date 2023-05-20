@@ -8,6 +8,7 @@
     <link rel="icon" href="./data/logo.png" type="image/icon type">
     
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/pop.css">
 </head>
 <body>
     <section>
@@ -31,26 +32,27 @@
                         <div class="slider-tab"></div>
                       </div>
                       <div class="form-inner">
-                        <form action="#" class="login">
+                        <form  class="login">
                           <div class="field">
-                            <input type="text" placeholder="Email Address" required>
+                            <input id="loginEmail" type="text" placeholder="Email Address" required>
                           </div>
                           <div class="field">
-                            <input type="password" placeholder="Password" required>
+                            <input id="loginPassword" type="password" placeholder="Password" required>
                           </div>
                           <div class="pass-link"><a href="#">Forgot password?</a></div>
                           <div class="field btn">
                             <div class="btn-layer"></div>
-                            <input type="submit" value="Login">
+                            <input onclick="login()" type="submit" value="Login">
                           </div>
                           <div class="signup-link">Not a member? <a href="">Signup now</a></div>
                         </form>
-                        <form action="#" class="signup">
+                        
+                        <form class="signup">
                           <div class="field">
                             <input type="text" placeholder="Full Name" required>
                           </div>
                           <div class="field">
-                            <input type="text" placeholder="Email Address" required>
+                            <input type="email" placeholder="Email Address" required>
                           </div>
                           <div class="field">
                             <input type="text" placeholder="Mobile Number" required>
@@ -60,15 +62,41 @@
                           </div>
                           <div class="field btn">
                             <div class="btn-layer"></div>
-                            <input type="submit" value="Signup">
+                            <input id="sign" type="submit" value="Signup">
                           </div>
                         </form>
                       </div>
                     </div>
-                  </div>
-              
+                  </div>  
             </div>
         </div>
+
+        <div class="container">
+          <div class="success-box" id="success">
+            <div class="dot"></div>
+            <div class="dot two"></div>
+            <div class="face">
+              <div class="eye"></div>
+              <div class="eye right"></div>
+              <div class="mouth happy"></div>
+            </div>
+            <div class="shadow scale"></div>
+            <div class="message"><h1 class="alert">Success!</h1><p>yay, everything is working.</p></div>
+            <button class="button-box" onclick="closeSuccess()"><h1 class="green">continue</h1></button>
+          </div>
+
+          <div class="error-box" id="error">
+            <div class="dot"></div>
+            <div class="dot two"></div>
+            <div class="face2">
+              <div class="eye"></div>
+              <div class="eye right"></div>
+              <div class="mouth sad"></div>
+            </div>
+            <div class="shadow move"></div>
+            <div class="message"><h1 class="alert">Error!</h1><p>oh no, something went wrong.</div>
+            <button class="button-box" onclick="closeError()"><h1 class="red">try again</h1></button>
+          </div>
     </section>
 </body>
 </html>
