@@ -26,7 +26,12 @@ signupLink.onclick = (()=>{
   return false;
 });
 
-function login(){
+let forms = document.querySelectorAll("form");
+
+forms[0].addEventListener("submit", login);
+
+function login(event){
+  event.preventDefault();
   let mail = document.querySelector("#loginEmail");
   let pass = document.querySelector("#loginPassword");
 
