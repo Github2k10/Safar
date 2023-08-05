@@ -1,0 +1,17 @@
+#btn{
+  /* border: 1px solid; */
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btn i{
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#btn i:hover{
+  transform: scale(1.2);
+  transition: .7s;
+}

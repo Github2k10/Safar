@@ -20,8 +20,9 @@ public class AdminLoginController {
     private AdminLoginService loginService;
 
     @PostMapping("/admin/login")
-    public ResponseEntity<CurrentAdminSession> loginAdmin(@Valid @RequestBody AdminLoginDTO loginDTO) throws AdminException, LoginException {
-        CurrentAdminSession currentAdminSession = loginService.adminLogin(loginDTO);
+    public ResponseEntity<CurrentAdminSession> loginAdmin(@RequestBody AdminLoginDTO loginDTO) throws AdminException, LoginException {
+//        System.out.println(loginDTO);
+    	CurrentAdminSession currentAdminSession = loginService.adminLogin(loginDTO);
         return new ResponseEntity<>(currentAdminSession, HttpStatus.ACCEPTED);
     }
 

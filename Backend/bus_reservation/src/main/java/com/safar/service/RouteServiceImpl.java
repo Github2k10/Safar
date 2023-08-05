@@ -40,7 +40,7 @@ public class RouteServiceImpl implements RouteService{
 		CurrentAdminSession loggedInAdmin= currentddminsessionrepository.findByaid(key);
 		
 		if(loggedInAdmin == null) {
-			throw new AdminException("Please provide a valid id to add route !");
+			throw new AdminException("Please provide a valid admin key!");
 		}
 		
 		Route newRoute = routerepository.findByRouteFromAndRouteTo(route.getRouteFrom(), route.getRouteTo());

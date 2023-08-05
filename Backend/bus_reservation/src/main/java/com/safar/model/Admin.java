@@ -1,5 +1,6 @@
 package com.safar.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,6 +27,7 @@ public class Admin {
     private String name;
 
     @Email
+    @Column(unique = true)
     private String email;
 
     @NotNull(message="Password can not be null!")

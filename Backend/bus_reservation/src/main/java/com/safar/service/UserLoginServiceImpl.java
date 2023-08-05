@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
+import java.security.SecureRandom;
+import java.util.Base64;
 
 @Service
 public class UserLoginServiceImpl implements UserLoginService{
@@ -30,8 +32,13 @@ public class UserLoginServiceImpl implements UserLoginService{
         if(loggedInUser.isPresent()) throw new LoginException("User already Logged!");
 
         if(registeredUser.getPassword().equals(userLoginDTO.getPassword())) {
-            String key= "safar123"; // RandomString.make(6);
-            CurrentUserSession currentUserSession = new CurrentUserSession();
+        	SecureRandom secureRandom = new SecureRandom();
+            byte[] keyBytes = new byte[10];
+            secureRandom.nextBytes(keyBytes);
+            
+            String key = Base64.getEncoder().encodeToString(keyBytes);
+        	
+        	CurrentUserSession currentUserSession = new CurrentUserSession();
             currentUserSession.setUserID(registeredUser.getUserID());
             currentUserSession.setUuid(key);
             currentUserSession.setTime(LocalDateTime.now());

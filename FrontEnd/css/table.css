@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 90%;
+    position: relative; 
+    margin-left: 20px ;
+    color: var(--text-color);
+}
+
+ table * {
+    position: relative
+}
+
+table td,table th {
+    padding-left: 8px
+}
+
+table thead tr {
+    height: 60px;
+    background: #36304a
+}
+
+table tbody tr {
+    height: 50px
+}
+
+table tbody tr:last-child {
+    border: 0
+}
+
+table td,table th {
+    text-align: left
+}
+
+table td.l,table th.l {
+    text-align: right
+}
+
+table td.c,table th.c {
+    text-align: center
+}
+
+table td.r,table th.r {
+    text-align: center
+}
+
+.table100-head th {
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    color:aqua;
+    line-height: 1.2;
+    font-weight: unset
+}
+
+/* tbody tr:nth-child(even) {
+    background-color:aqua
+} */
+
+tbody tr {
+    font-family: OpenSans-Regular;
+    font-size: 15px;
+    color:var(--text-color);
+    line-height: 1.2;
+    font-weight: unset
+}
+
+.column1 {
+    width: 120px;
+    padding-left: 40px
+}
+
+.column2 {
+    width: 130px
+}
+
+.column3 {
+    width: 130px
+}
+
+.column4 {
+    width: 100px;
+    text-align: right
+}
+
+.column5 {
+    width: 200px;
+    text-align: right
+} 
+
+.column6 {
+    width: 100px;
+    text-align: right
+}
+
+.column7 {
+    width: 100px;
+    text-align: right
+}
+
+.column8 {
+    width: 100px;
+    text-align: right;
+}

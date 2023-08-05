@@ -19,6 +19,7 @@ public class AdminController {
 
     @PostMapping("/admin/register")
     public ResponseEntity<Admin> registerAdmin(@Valid @RequestBody Admin admin) throws AdminException {
+    	System.out.println("Admin Controller: " + admin);
         Admin savedAdmin = service.createAdmin(admin);
         return new ResponseEntity<>(savedAdmin, HttpStatus.CREATED);
     }
