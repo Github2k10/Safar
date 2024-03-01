@@ -59,8 +59,6 @@ The bus reservation system portal is a web-based application that enables users 
 * Update the port number, username and password as per your local database config.
 
 ```
-      server.port=8999
-
       #db specific properties
       spring.datasource.url=jdbc:mysql://localhost:3306/busdb
       spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
@@ -75,7 +73,7 @@ The bus reservation system portal is a web-based application that enables users 
 
 ## API Root Endpoint
 
-`https://localhost:8000/`
+`https://localhost:8080/`
  
-`http://localhost:8000/swagger-ui/`
+`http://localhost:8080/swagger-ui/`
 
