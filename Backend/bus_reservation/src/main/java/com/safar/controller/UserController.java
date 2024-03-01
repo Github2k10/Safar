@@ -19,6 +19,11 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+    
+    @GetMapping("/hello")
+    public String hello() {
+    	return "Hello";
+    }
 
     @PostMapping("/user/register")
     public ResponseEntity<User> registerUser(@Valid @RequestBody User user) throws UserException {
